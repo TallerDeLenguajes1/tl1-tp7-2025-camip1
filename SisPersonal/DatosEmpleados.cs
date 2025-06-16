@@ -1,21 +1,60 @@
 namespace DatosEmpleados
 {
-    public class Empleados
+    public enum Cargo
     {
-        private string Nombre;
-        private string Apellido;
+        Auxiliar,
+        Administrativo,
+        Ingeniero,
+        Especialista,
+        Investigador,
+    }
+
+    public class Empleado
+    {
+        private string nombre;
+        private string apellido;
         private DateTime fechaDeNacimiento;
-        private char EstadoCivil;
-        private DateTime FechaIngreso;
-        private double sueldoBasico(double);
-        enum cargos
+        private char estadoCivil;
+        private DateTime fechaIngreso;
+        private double sueldoBasico;
+        private Cargo cargo;
+
+        // Propiedades
+        public string Nombre
         {
-        Auxiliar = 0,
-        Administrativo=1,
-        Ingeniero = 2,
-        Especialista = 3,
-        Investigador = 4,
+            get => nombre;
+            set => nombre = value;
         }
-        private cargos Cargo;
+        public string Apellido
+        {
+            get => apellido;
+            set => apellido = value;
+        }
+        public DateTime FechaDeNacimiento
+        {
+            get => fechaDeNacimiento;
+            set => fechaDeNacimiento = value;
+        }
+        public char EstadoCivil
+        {
+            get => estadoCivil;
+            set => estadoCivil = value;
+        }
+        public DateTime FechaIngreso
+        {
+            get => fechaIngreso;
+            set => fechaIngreso = value;
+        }
+        public double SueldoBasico
+        {
+            get => sueldoBasico;
+            set => sueldoBasico = value;
+        }
+        public Cargo CargoEmpleado
+        {
+            get => cargo;
+            set => cargo = value;
+        }
     }
 }
+
